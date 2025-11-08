@@ -1,0 +1,98 @@
+Unit,Description/Abilities,Tier,Type,Factory,Role,BC,MC,EC,health,speed,damage,,Structure,Description,Tier,Type,BC,MC,EC,EP,MP,Health
+Grunt,Fast infantry bot,1,Bot,Bot Lab,,1279,36,880,290,84,74,,Energy Converter,Converts 70 energy into 1 metal per sec,1,Building,2682,1,1250,-70,1,167
+Graverobber,stealthy rez/reclaim,1,Bot,Bot Lab,,2400,110,1400,220,78,,,Naval Energy Converter,Converts 70 energy into 1.1 metal per sec,1,Building,2682,1,2500,-70,1.1,133
+Aggravator,Rocket bot,1,Bot,Bot Lab,,1949,110,1150,740,48,41,,Beholder,Perimeter Camera,1,Building,750,32,850,-13,0,280
+Construction Bot,Tech 1 constructor,1,Bot,Bot Lab,,3551,120,1750,660,,,,Wind Turbine,Produces Energy. Depends on wind strength.,1,Building,1687,45,175,wind speed,0,199
+Trasher,Amphibious Anti-Air,1,Bot,Bot Lab,,1900,125,1100,640,53,55,,Radar Tower,,1,,1137,60,630,,,90
+Thug,Light Plasma Bot,1,Bot,Bot Lab,,1971,140,1150,1000,45,60,,Naval Radar/Sonar Tower,,1,,1800,130,1000,,,114
+Cortex Commander,Commander,,, ,,,2700,26000,3350,38,111614,,Metal Extractor,Extracts Metal from Metalspots,1,Building,1874,50,500,-3,metalspot,194
+Bedbug,Amphibious crawling bomb,2,,Advanced Bot Lab,,7899,69,5800,620,81,2000,,Tidal Generator,Produces Energy (depends on map),1,Building,2094,85,250,map,0,395
+Deceiver,Radar Jammer Bot,2,,Advanced Bot Lab,,5439,75,1550,345,39,,,Sonar Station,Early Warning System,1,Building,,20,450,0,0,58
+Augur,Radar Bot,2,,Advanced Bot Lab,,3945,99,1350,390,45,,,Solar Collector,Produces 20 Energy,1,Building,2800,150,0,20,0,355
+Spectre,Spy Bot,2,,Advanced Bot Lab,,22247,165,12500,380,62,,,Energy Storage,Increases Energy Storage (6000),1,Building,4257,175,1800,0,0,2000
+Fiend,Fast Assault Bot,2,,Advanced Bot Lab,,5027,200,3000,1060,83,240,,Exploiter,Armed Metal Extractor,1,Building,2724,240,1900,,,1440
+Twitcher,Combat Engineer,2,,Advanced Bot Lab,,6488,210,3800,830,90,,,Construction Turret,Assist & Repair in large radius. Transportable,1,Building,5312,210,3200,0,0,560
+Duck,Amphibious Bot,2,,Advanced Bot Lab,,9650,330,9500,2350,56,174,,Castro,Short Range Jamming Device,1,Building,4577,115,5200,-65,0,1070
+Sheldon,Mobile Mortar Bot,2,,Advanced Bot Lab,,5139,410,2200,940,50,66,,Naval Construction Turret,,,,,230,2600,,,560
+Advanced Construction Bot,Tech 2 constructor,2,,Advanced Bot Lab,,9700,470,6900,1000,33,,,Naval Energy Storage,Increases Energy Storage (6000),1,Building,7241,300,2700,0,0,3400
+Skuttle,Adv. Amphibious crawling bomb,2,,Advanced Bot Lab,,16975,540,26000,355,84,3350,,Metal Storage,Increases Metal Storage (3000),1,Building,2925,340,590,0,0,2100
+Sumo,Armored Assault Bot,2,,Advanced Bot Lab,,11734,560,9300,5400,38,344,,Advanced Solar Collector,Produces 75 Energy,1,Building,8143,370,4000,75,0,1200
+Arbiter,Heavy Rocket Bot,2,,Advanced Bot Lab,,6600,600,5800,610,54,100,,Naval Metal Storage,Increases Metal Storage (3000),1,Building,3874,370,1600,0,0,3900
+Manticore,Heavy Amphibious Anti-Air Bot,2,,Advanced Bot Lab,,7600,650,6200,1420,35,249,,Geothermal Powerplant,Produces 300 Energy,1,Building,12875,540,13000,300,0,2050
+Termite,Heavy All-terrain assault spider,2,,Advanced Bot Lab,,18834,700,12000,3100,48,331,,Advanced Radar Tower,Long Range Radar,2,Building,11960,560,19000,0,0,365
+Commander,Decoy Commander,2,,Advanced Bot Lab,,26941,750,13000,3350,38,411,,Shroud,Long-Range Jamming Tower,2,Building,9392,130,20000,-125,0,890
+Commando,Stealthy paratrooper bot,2,,Advanced Bot Lab,,17131,1200,15500,1560,75,200,,Advanced Sonar Station,Extended Sonar,,,,160,2400,,,2400
+Mammoth,Heavy Armored Assault Bot,2,,Advanced Bot Lab,,50975,2200,35000,15600,23,503,,Advanced Energy Converter,Converts 600 energy into 10.3 metal per sec,2,Building,31253,370,21000,-600,10.3,560
+Shiva,Amphibious Siege Mech,3,,Experimental Gantry,,30609,1550,23000,9400,48,407,,Naval Advanced Energy Converter,Converts 650 energy into 11 metal per sec,2,,,400,23500,-650,11,445
+Karganeth,All-Terrain Assault Mech,3,,Experimental Gantry,,50609,1650,38000,10000,45,556,,Air Repair Pad,Automatically Repairs Aircraft,2,Building,9315,400,4400,0,0,1780
+Catapult,Heavy Rocket Bot,3,,Experimental Gantry,,127000,4900,80000,6100,48,600,,Advanced Metal Extractor,Advanced Metal Extractor/Storage,2,Building,14125,640,8100,-20,4 x metalspot,3900
+Behemoth,Mobile Heavy Turret,3,,Experimental Gantry,,630000,20000,513000,335000,17,1121,,Naval Advanced Metal Extractor,Advanced Metal Extractor/Storage,,,,710,10500,,,2300
+Juggernaut,Experimental Assault Bot,3,,Experimental Gantry,,555000,29000,615000,149000,34,4190,,Hardened Metal Storage,Increases Metal Storage (10000),2,Building,20524,760,11000,0,0,11200
+Rascal,Light scout vehicle,1,,Vehicle Plant,,1150,26,270,75,153,30,,Pinpointer,"Enhanced Radar Targeting, more facilities enhance accuracy",2,Building,10898,800,7500,-100,0,2000
+Trapper,Stealthy minelayer/minesweeper,1,,Vehicle Plant,,3640,61,1300,172,69,40,,Hardened Energy Storage,Increases Energy Storage (40000),2,Building,20416,840,11000,0,0,12700
+Incisor,Light Tank,1,,Vehicle Plant,,1761,118,1042,820,86,98,,Cerberus,Geothermal Plasma Battery,2,Building,59640,3100,35000,,0,8300
+Construction Vehicle,Tech 1 constructor,1,,Vehicle Plant,,4160,145,2100,1430,51,,,Advanced Geothermal Powerplant,Produces 1250 Energy (Hazardous),2,Building,32078,1500,27000,1250,0,4150
+Lasher,Missile Truck,1,,Vehicle Plant,,3435,155,2400,860,42,48,,Advanced Exploiter,Armed Advanced Metal Extractor,2,,32500,2400,12000,,,7800
+Wolverine,Light Mobile Artillery,1,,Vehicle Plant,,3254,155,2300,640,51,45,,Fusion Reactor,Produces 1100 Energy,2,Building,75424,4500,26000,1100,0,5000
+Muskrat,Amphibious Construction Vehicle,1,,Vehicle Plant,,6864,170,3500,1110,41,80,,Naval Fusion Reactor,Produces 1220 Energy,2,Building,,5400,34000,1220,0,5900
+Garpike,Light Amphibious Tank,1,,Vehicle Plant,,3101,220,2600,1420,59,77,,Advanced Fusion Reactor,Produces 3000 Energy (Hazardous),2,Building,329243,9700,48000,3000,0,9400
+Pounder,Riot Tank,1,,Vehicle Plant,,3009,220,2600,1490,41,106,,Dragon's Teeth,Fortification,1,Defense,255,8,0,0,0,2800
+Brute,Medium Assault Tank,1,,Vehicle Plant,,3312,235,2400,1970,73,83,,Shark's Teeth,Naval Fortification,1,Defense,400,15,0,0,0,4450
+Omen,Radar vehicle,2,,Advanced Vehicle Plant,,4223,92,1300,570,36,,,Light Mine,Light Mine,,,50,5,270,,,11
+Obscurer,Radar Jammer Vehicle,2,,Advanced Vehicle Plant,,6404,105,1900,580,41,,,Medium Mine,Medium Mine,,,100,16,1050,,,11
+Quaker,Mobile Artillery,2,,Advanced Vehicle Plant,,4270,280,3300,830,54,71,,Heavy Mine,Heavy Mine,,,125,21,1350,,,11
+Fury,Anti-Air Flak vehicle,2,,Advanced Vehicle Plant,,11986,470,10500,2700,69,364,,Heavy Mine,"Heavy Mine, Naval Series",,,,25,1600,,,11
+Alligator,Medium Amphibious Tank,2,,Advanced Vehicle Plant,,12051,480,9100,2600,72,129,,Thistle,Light Anti-air Tower. Transportable (Heavy),1,Defense,1749,80,850,0,0,335
+Advanced Construction Vehicle,Tech 2 constructor,2,,Advanced Vehicle Plant,,12882,580,7000,2150,50,,,Guard,Light Laser Tower. Transportable (Heavy),1,Defense,2724,90,700,-42,0,650
+Tiger,Heavy Assault Tank,2,,Advanced Vehicle Plant,,11501,665,10000,5300,71,156,,Slingshot,Floating Anti-air Tower,1,Defense,2200,90,1000,0,0,395
+Negotiator,Stealthy Rocke Launcher,2,,Advanced Vehicle Plant,,15002,880,6700,1390,33,106,,Gun Platform,light plasma defense (naval),,,,120,950,,,810
+Banisher,Heavy Missile Tank,2,,Advanced Vehicle Plant,,23129,1000,23000,2500,54,133,,Urchin,Offshore Torpedo Launcher,1,Defense,3760,170,1800,0,0,1440
+Poison Arrow,Very Heavy Amphibious Tank,2,,Advanced Vehicle Plant,,22181,1050,29000,6300,51,206,,Twin Guard,Anti-Swarm Double Guard,1,Defense,5448,195,1750,,,1670
+Saviour,Mobile Anti-Nuke,2,,Advanced Vehicle Plant,,42000,1250,32000,870,51,250,,Jellyfish,Coastal Torpedo Launcher,1,Defense,6800,250,2200,0,0,2350
+Tzar,Very Heavy Assault Tank,2,,Advanced Vehicle Plant,,26125,1650,22000,7800,41,300,,Dragon's Maw,Pop-up Flamethrower Turret,1,Defense,4419,290,1550,0,0,1610
+Tremor,Heavy Artillery Vehicle,2,,Advanced Vehicle Plant,,31100,1850,49000,3000,41,738,,SAM,Hardened Anti-Air Missle Battery,1,Defense,5237,315,6100,,0,2800
+Finch,Scout plane,1,,Aircraft Plant,,2400,51,1450,100,360,,,Warden,Heavy Laser Tower,1,Defense,12650,480,4700,,0,2750
+Shuriken,Light Paralyzer Drone,1,,Aircraft Plant,,2073,58,1300,83,281,,,Coral,Floating Heavy Laser Tower,,,,480,6200,,,4350
+Valiant,Fighter,1,,Aircraft Plant,,3333,73,2800,156,298,167,,Janitor,Floating Anti-Air Missile Battery,,,,480,2400,,,1420
+Hercules,Air Transport,1,,Aircraft Plant,,4122,74,1450,280,198,,,Juno,Anti Radar/Jammer/Minefield/ScoutSpam Weapon,1,Defense,27681,660,16000,,,2500
+Bat,Seaplane Swarmer,1,,Seaplane Platform,,,90,4600,200,316,240,,Eradicator,Bomb-Resistant Medium-Range Anti-Air Missile Battery,1,Defense,12000,800,7900,0,0,4450
+Construction Aircraft,Tech 1 constructor,1,,Aircraft Plant,,8357,115,3200,161,201,,,Agitator,Medium Plasma Artillery,1,Defense,19268,1300,13500,0,0,3250
+Watcher,Advanced Radar/Sonar Plane,1,,Seaplane Platform,,,130,6900,730,324,,,Fortification Wall,Advanced Fortification,2,Defense,900,40,500,0,0,8900
+Construction Seaplane,Tech 1 constructor,1,,Seaplane Platform,,,140,8200,435,218,,,Scorpion,Pop-up Sabot Battery,2,Defense,15035,730,14000,,0,3000
+Whirlwind,Bomber,1,,Aircraft Plant,,5054,150,4600,680,234,93,,Nemesis,Intrusion Countermeasure System - tracks down stealthy units,2,Defense,11955,750,6700,,0,2800
+Dam Buster,Seaplane Bomber,1,,Seaplane Platform,,,200,8200,940,240,150,,Birdshot,Anti-Air Flak Gun,2,Defense,20112,850,14000,0,0,1840
+Cutlass,Seaplane Gunship,1,,Seaplane Platform,,,230,5400,1010,152,72,,Naval Birdshot,Anti-Air Flak Gun - Naval Series,,,,890,25000,,,2000
+Monsoon,Torpedo Gunship,1,,Seaplane Platform,,,230,5500,1070,266,68,,Lamprey,Advanced Torpedo Launcher,,,,1050,8500,,,2800
+Nighthawk,Stealth Fighter,2,,Advanced Aircraft Plant,,6554,105,3700,290,380,633,,Catalyst,Tactical Missile Launcher,,,58927,1200,14000,,,3550
+Condor,Radar/Sonar Plane,2,,Advanced Aircraft Plant,,13264,180,8300,990,321,,,Devastator,Floating Multi-Weapon Platform,,,,1200,15000,,,6700
+Hailstorm,Heavy Strategic Bomber,2,,Advanced Aircraft Plant,,31000,310,18500,1520,248,238,,Prevailer,Anti-Nuke System,2,Defense,60000,1500,40000,,,3650
+Advanced Construction Aircraft,Tech 2 constructor,2,,Advanced Aircraft Plant,,18001,360,6800,205,182,,,Screamer,Long Range Anti-Air Tower,2,Defense,28000,1650,32000,,,1670
+Wasp,Gunship,2,,Advanced Aircraft Plant,,14500,370,6800,1560,159,111,,Persecutor,Pop-up Plasma Artillery,2,Defense,25717,2500,17000,,,4250
+Skyhook,Assault Heavy Transport,2,,Advanced Aircraft Plant,,15289,370,6400,1830,210,,,Overseer,Plasma Deflector,2,Defense,55000,3200,55000,,,3550
+Angler,Torpedo Bomber,2,,Advanced Aircraft Plant,,14722,410,8200,1960,279,188,,Bulwark,Energy Weapon,2,Defense,55276,3000,37000,,,9400
+Dragon,Flying Fortress,2,,Advanced Aircraft Plant,,84229,5100,72000,16700,115,477,,Basilisk,Long Range Plasma Cannon,2,Defense,93237,4600,67000,,,4700
+Supporter,Light Gunboat,1,,Shipyard,,,100,1000,480,110,82,,Apocalypse,Nuclear ICBM Launcher,2,Defense,181243,7700,82000,,,6200
+Construction Ship,Tech 1 constructor,1,,Shipyard,,,200,2000,1080,60,,,Calamity,Rapid-Fire Long-Range Plasma Cannon,2,Defense,1400000,61000,718000,,,33500
+Death Cavalry,Ressurection Sub,1,,Shipyard,,,200,3200,420,67,,,Shipyard,Produces Tech 1 Ships,1,Factory,6600,600,1200,,,4300
+Herring,Missile Corvette/Light Anti Air/Sonar,1,,Shipyard,,,230,1600,890,69,92,,Bot Lab,Produces Tech 1 Bots,1,Factory,6500,620,1300,0,0,2900
+Riptide,Assault Frigate,1,,Shipyard,,,410,2700,2350,83,120,,Vehicle Plant,Produces Tech 1 Vehicles,1,Factory,7151,720,1800,0,0,3000
+Orca,Submarine,1,,Shipyard,,,580,4000,1060,60,137,,Aircraft Plant,Produces Tech 1 Aircraft,1,Factory,7180,840,1350,0,0,2150
+Oppressor,Destroyer,1,,Shipyard,,,960,7200,3950,62,267,,Hovercraft Platform,Builds Hovercraft,1,Factory,11000,900,3000,0,0,3750
+Phantasm,Radar Jammer Ship,2,,Advanced Shipyard,,,120,1800,630,61,,,Naval Hovercraft Platform,Builds Hovercraft,1,Factory,11000,900,3000,0,0,3750
+Pathfinder,Naval Engineer,2,,Advanced Shipyard,,,200,3300,1600,58,200,,Seaplane Platform,Builds Seaplanes,1,Factory,11800,1400,5500,0,0,2200
+Advanced Construction Ship,Tech 2 constructor,2,,Advanced Shipyard,,,700,9000,1110,65,,,Advanced Bot Lab,Produces Tech 2 Bots,2,Factory,16819,2900,16000,0,0,4500
+Predator,Fast Assault Submarine,2,,Advanced Shipyard,,,730,14000,1610,84,159,,Advanced Vehicle Plant,Produces Tech 2 Vehicles,2,Factory,18492,2800,16000,0,0,5100
+Arrow Storm,Anti-Air Ship,2,,Advanced Shipyard,,,1000,12000,3900,60,520,,Advanced Aircraft Plant,Produces Tech 2 Aircraft,2,Factory,20678,3200,28000,0,0,3900
+Buccaneer,Cruiser,2,,Advanced Shipyard,,,1000,12000,5600,66,407,,Advanced Shipyard,Produces Tech 2 Ships,,,,3100,10000,,,5900
+Oasis,Aircraft Carrier,2,,Advanced Shipyard,,,1400,17000,5000,60,750,,Experimental Gantry,Produces Experimental Units,3,Factory,67321,8350,62500,0,0,17800
+Kraken,Long Range Battle Submarine,2,,Advanced Shipyard,,,1900,29000,3900,39,206,,Experimental Gantry 2,Produces Experimental Units,,,,8400,62000,,,17800
+Messenger,Cruise Missile Ship,2,,Advanced Shipyard,,,2000,10000,3350,61,207,,Amphibious Complex,Produces Amphibious/Underwater Units,,,,1200,5600,,,2800
+Despot,Battleship,2,,Advanced Shipyard,,,3400,23000,11100,53,1221,,,,,,,,,,,
+Black Hydra,Flagship,2,,Advanced Shipyard,,,18000,158000,53000,50,1685,,,,,,,,,,,
+Goon,Fash Attack Hovercraft,,,Hovercraft Platform,,1500,75,1500,255,110,60,,,,,,,,,,,
+Construction Hovercraft,Tech 1 constructor,,,Hovercraft Platform,,4576,190,3000,1490,61,,,,,,,,,,,,
+Mangonel,Hovercraft Rocket Launcher,,,Hovercraft Platform,,3500,200,3300,550,64,61,,,,,,,,,,,
+Birdeater,Anti-Air Hovercraft,,,Hovercraft Platform,,3650,250,4700,1120,89,85,,,,,,,,,,,
+Cayman,Hovertank,,,Hovercraft Platform,,3791,320,3300,1720,67,70,,,,,,,,,,,
+Halberd,Assault Hovertank,,,Hovercraft Platform,,12907,640,13000,4350,45,344,,,,,,,,,,,
+Cataphract,Heavy Laser Hovertank,,,Experimental Gantry,,27000,950,19000,4200,45,351,,,,,,,,,,,

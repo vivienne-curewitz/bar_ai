@@ -3,7 +3,7 @@ import json
 import time
 from threading import Thread
 
-HOST = '127.0.0.1'  # Server IP
+HOST = '172.16.0.220'  # Server IP
 PORT = 7450        # Server port
 LPORT = 7451
 
@@ -54,7 +54,7 @@ def send_repeat():
 
 def main():
     st = Thread(target=send_repeat, daemon=True)
-    st.start()
+    # st.start()
     listen_thread()
 
 if __name__ == "__main__":
