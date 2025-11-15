@@ -125,16 +125,16 @@ class BARState:
     mex_available = 3 # this is a weird one, the player is always limited to some number of mexes they can build, but everything else is unlimited (besides geos)
     incoming_edges = []
     outgoing_edges = []
-    heuristic_score = 0
+    heuristic = 10000000000000000000000000000 # just really large
 
     def __init__(self, resources = []):
         self.resources = resources
         self.income = Income(0, 0)
 
     def utility(self) -> float:
-        if self.income.metal_per_second == 0 and self.total_metal == 0:
+        if self.income.metal_per_second == 0:
             return 0
-        if self.income.energy_per_second == 0 and self.total_energy == 0:
+        if self.income.energy_per_second == 0:
             return 0
         total_bp = sum([r.build_power for r in self.resources])
         # utility is just the sum of all resources and incomes
@@ -226,7 +226,7 @@ class BARState:
     def goalDelta(self, goal: dict) -> dict:
         me = self.resource_count()
         delta = {}
-        for u, c in goal:
+        for u, c in goal.items():
             delta[u] = goal[u] - me[u] if u in me.keys() else goal[u]
         return delta
 
@@ -236,6 +236,7 @@ class BARState:
             u_cost = Cost.NewCost(u)
             bp_app = self.calc_bp_applied(u_cost)
             total_time += u_cost.build_power/bp_app * c
+        return total_time
 
 # goal is a dict of the form {Unit: str, count: int}
 def generate_goal_state(goal: dict):
@@ -299,6 +300,7 @@ class BARStateGraph:
     count = 0
     start_time = 0
     bench_info = []
+    best_score = 0000
 
     def __init__(self, states=[], edges=[]):
         self.states=states
@@ -309,22 +311,26 @@ class BARStateGraph:
             print(f"Trying to work on state outside of array bounds")
         state: BARState = self.states[state_index]
         new_states, new_edges = state.expand_state()
+        # for i, ns in enumerate(new_states):
+        #     to_add = True
+        #     for es in self.states:
+        #         if ns.compare(es):
+        #             new_edges[i].post_state = es
+        #             to_add = False
+        #             break
+        #     if to_add:
+        #         ns.heuristic = heuristic(state)
+        #         self.states.append(ns)
+        #     self.edges.append(new_edges[i])
         for i, ns in enumerate(new_states):
-            to_add = True
-            for es in self.states:
-                if ns.compare(es):
-                    new_edges[i].post_state = es
-                    to_add = False
-                    break
-            if to_add:
-                ns.heuristic_score = heuristic(state)
-                self.states.append(ns)
+            ns.heuristic = heuristic(state)
+            self.states.append(ns)
             self.edges.append(new_edges[i])
 
     def heuristic_factory(self, goal, utility_ratio = 0, distance_ratio=1):
         def heuristic(state: BARState):
             delta = state.goalDelta(goal)
-            return distance_ratio * state.delta_distance(delta) - utility_ratio * state.utility()
+            return distance_ratio * state.delta_distance(delta) - utility_ratio * state.utility() - len(state.resources)
         return heuristic
     """
     Debug and testing functions below
@@ -336,7 +342,8 @@ class BARStateGraph:
             snap = {
                 "time": time.perf_counter() - self.start_time,
                 "SE": self.count,
-                "TS": len(self.states)
+                "TS": math.log(len(self.states)),
+                "BS": self.best_score
             }
             queue.put(snap)
             time.sleep(0.05)
@@ -348,6 +355,7 @@ class BARStateGraph:
         fig, ax = plt.subplots(figsize=(10, 5))
         line_se, = ax.plot([], [], label="States Expanded")
         line_ts, = ax.plot([], [], label="Total States")
+        line_bs, = ax.plot([], [], label="Best Score")
         ax.set_xlabel("Time (s)")
         ax.set_ylabel("Count")
         ax.set_title("Expansion Progress")
@@ -363,6 +371,7 @@ class BARStateGraph:
             # Update line data
             line_se.set_data(df["time"], df["SE"])
             line_ts.set_data(df["time"], df["TS"])
+            line_bs.set_data(df["time"], df["BS"])
             # Rescale axes
             ax.relim()
             ax.autoscale_view()
@@ -370,12 +379,38 @@ class BARStateGraph:
             fig.canvas.draw()
             fig.canvas.flush_events()
 
-    def test_goal_find(self, goal):
+    def test_goal_find(self, i=1000, goal={}):
         heuristic = self.heuristic_factory(goal, 0, 1)
         self.start_time = time.perf_counter()
         def search_loop():
+            smallest = 0
+            last_smallest = -1
             while self.count < i:
-                self.expand_graph(self.count, heuristic)
+                self.expand_graph(smallest, heuristic)
+                hs = 10000000000000000000000
+                for j, ns in enumerate(self.states):
+                    if ns.heuristic < hs:
+                        smallest = j 
+                        hs = ns.heuristic
+                self.best_score = hs
+                print(f"Best State Score: {self.states[smallest].heuristic} in {len(self.states)} states")
+                if smallest == last_smallest:
+                    print(f"Error - found same smallest value\n{self.states[j].resource_count()}")
+                    return
+                else:
+                    last_smallest = smallest 
+                self.count += 1
+                if hs <= 0:
+                    print(f"Found Solution: {self.states[smallest].resource_count()}")
+                    return
+        compute_thread = threading.Thread(target=search_loop)
+        compute_thread.start()
+        queue = Queue()
+        graph_p = Process(target=BARStateGraph.graph_process, args=[queue])
+        graph_p.start()        
+        self.info(compute_thread, queue)
+        queue.put("done")
+
 
 
     def test_loop(self, i=1000):
@@ -424,8 +459,8 @@ def step_state():
     com = Resource.NewResource("Cortex Commander")
     base_state = BARState([com])
     graph = BARStateGraph(states=[base_state])
-    graph.test_loop(3000)
+    graph.test_goal_find(i=1000, goal={"Tzar": 4})
 
 if __name__ == "__main__":
-    # step_state()
-    test_req_chain()
+    step_state()
+    # test_req_chain()
